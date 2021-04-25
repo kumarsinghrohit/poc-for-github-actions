@@ -22,9 +22,9 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Build the docker image and publish
       run: |
-        docker build . --file Dockerfile --tag docker.pkg.github.com/rohit-lenze/demo-spring-boot/app:1.0.0
-        docker login docker.pkg.github.com --username rohit-lenze --password ${{ secrets.GITHUB_TOKEN }}
-        docker push docker.pkg.github.com/rohit-lenze/demo-spring-boot/app:1.0.0
+        docker build . --file Dockerfile --tag dock1er.pkg.github.com/kumarsinghrohit698/demo-spring-boot/app:1.0.0
+        docker login dock1er.pkg.github.com --username kumarsinghrohit698 --password ${{ secrets.GITHUB_TOKEN }}
+        docker push dock1er.pkg.github.com/kumarsinghrohit698/demo-spring-boot/app:1.0.0
     #- name: push to docker hub
     #  run: |
     #    docker tag helloworld-image rohitsinghhoneywell/myrepo:1.0
@@ -32,8 +32,8 @@ jobs:
     #####################################
     #- name: push to nexus
     #  run: |
-    #    docker tag helloworld-image nat01.encowayhb.lokal:5002/mosaiq-store/mosaiq-store:latest
-    #    docker push nat01.encowayhb.lokal:5002/mosaiq-store/mosaiq-store:latest
+    #    docker tag helloworld-image <nexus-url>/my-application/my-application:latest
+    #    docker push <nexus-url>/my-application/my-application:latest
       
       
       
